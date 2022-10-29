@@ -36,6 +36,16 @@ const menu = () => {
                     About
                 </NavLink>
             </Button>
+            <Button>
+                <NavLink
+                    to="/products"
+                    className={({ isActive }) =>
+                        isActive ? 'menu-item-active' : 'menu-item'
+                    }
+                >
+                    Products
+                </NavLink>
+            </Button>
         </>
     )
 }
