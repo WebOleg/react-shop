@@ -8,6 +8,7 @@ import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import Menu from 'components/Menu/Menu'
+import CartHeader from 'components/Cart/CartHeader'
 
 const Header = () => {
     return (
@@ -26,7 +27,7 @@ const Header = () => {
                     News
                 </Typography>
                 <Menu />
-                <Button color="inherit">Login</Button>
+                <CartHeader />
             </Toolbar>
         </AppBar>
     )
