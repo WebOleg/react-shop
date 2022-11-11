@@ -1,10 +1,10 @@
 import React from 'react'
 
-const CartHeader = () => {
+const CartHeader = ({ cartData }) => {
     return (
         <div>
-            <div>0</div>
-            <div>$0</div>
+            <div>{cartData.totalCount}</div>
+            <div>${cartData.totalPrice}</div>
         </div>
     )
 }

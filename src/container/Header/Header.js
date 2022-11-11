@@ -10,7 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Menu from 'components/Menu/Menu'
 import CartHeader from 'components/Cart/CartHeader'
 
-const Header = () => {
+const Header = ({ cartData }) => {
     return (
         <AppBar position="static">
             <Toolbar>
@@ -27,7 +27,7 @@ const Header = () => {
                     News
                 </Typography>
                 <Menu />
-                <CartHeader />
+                <CartHeader cartData={cartData} />
             </Toolbar>
         </AppBar>
     )
