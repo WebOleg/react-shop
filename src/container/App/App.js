@@ -6,6 +6,12 @@ import Main from 'container/Main/Main'
 
 const App = () => {
     const [cartData, setCartData] = useState({ totalCount: 0, totalPrice: 0 })
+    const addProductToCart = (price, count) => {
+        setCartData((prevState) => ({
+            totalCount: prevState.totalCount + count,
+            totalPrice: prevState.totalPrice + count * price,
+        }))
+    }
     return (
         <>
             <StyledEngineProvider injectFirst>
