@@ -9,7 +9,7 @@ import Home from 'pages/Home/Home'
 import Products from 'pages/Products/Products'
 import { Routes, Route } from 'react-router-dom'
 
-const Main = () => {
+const Main = ({ addProductToCart }) => {
     return (
         <>
             <Container>
@@ -17,7 +17,12 @@ const Main = () => {
                     <Route path="/" element={<Home />}></Route>
                     <Route path="/about" element={<About />}></Route>
                     <Route path="/contact" element={<Contact />}></Route>
-                    <Route path="/products" element={<Products />} />
+                    <Route
+                        path="/products"
+                        element={
+                            <Products addProductToCart={addProductToCart} />
+                        }
+                    />
                     <Route path="/articles/:id" element={<Article />} />
                 </Routes>
             </Container>
