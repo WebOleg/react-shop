@@ -1,4 +1,5 @@
 import React from 'react'
+import productsArray from 'utils/productsArray'
 
 const CartHeader = ({ productsInCart }) => {
     return (
@@ -6,7 +7,8 @@ const CartHeader = ({ productsInCart }) => {
             <div>
                 {Object.keys(productsInCart).map((productId) => (
                     <div key={productId}>
-                        {productId}:{productsInCart[productId]}
+                        {productsArray[productId - 1].title}:
+                        {productsInCart[productId]}
                     </div>
                 ))}
             </div>
