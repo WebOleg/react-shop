@@ -21,6 +21,7 @@ const ProductsList = ({ addProductToCart }) => {
                     ({ id, image, title, describe, type, price, capacity }) => (
                         <Grid key={id} sm={4} item>
                             <ProductsListItem
+                                id={id}
                                 image={image}
                                 title={title}
                                 describe={describe}

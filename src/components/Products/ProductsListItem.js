@@ -16,6 +16,7 @@ const ProductsListItem = ({
     capacity,
     price,
     addProductToCart,
+    id,
 }) => {
     const [count, setCount] = useState(1)
 
@@ -46,7 +47,7 @@ const ProductsListItem = ({
                         >
                             -
                         </Button>
-                        <TextField value={count} readonly size="small" />
+                        <TextField value={count} readOnly size="small" />
                         <Button
                             disabled={count >= 10}
                             onClick={onIncrement}
@@ -59,7 +60,7 @@ const ProductsListItem = ({
                 </CardContent>
                 <CardActions className="wrap-btn">
                     <Button
-                        onClick={() => addProductToCart(price, count)}
+                        onClick={() => addProductToCart(id, count)}
                         variant="contained"
                     >
                         Add To Cart
