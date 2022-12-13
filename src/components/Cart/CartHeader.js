@@ -1,13 +1,22 @@
 import React from 'react'
 import productsArray from 'utils/productsArray'
 
+const productsObject = productsArray.reduce(
+    (object, product) => ({
+        ...object,
+        [product.id]: product,
+    }),
+    {}
+)
+console.log(productsArray)
+console.log(productsObject)
 const CartHeader = ({ productsInCart }) => {
     return (
         <div>
             <div>
                 {Object.keys(productsInCart).map((productId) => (
                     <div key={productId}>
-                        {productsArray[productId - 1].title}:
+                        {productsObject[productId].title}:
                         {productsInCart[productId]}
                     </div>
                 ))}
