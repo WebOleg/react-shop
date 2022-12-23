@@ -1,5 +1,6 @@
 import React from 'react'
 import productsArray, { getProductsObject } from 'utils/productsArray'
+import CartTotal from 'components/CartTotal/CartTotal'
 
 const Cartpage = ({
     productsInCart,
@@ -16,14 +17,7 @@ const Cartpage = ({
                     </div>
                 ))}
             </div>
-            <div className="total">
-                Total:
-                {Object.keys(productsInCart).reduce(
-                    (sum, id) =>
-                        sum + productsObject[id].price * productsInCart[id],
-                    0
-                )}
-            </div>
+            <CartTotal productsInCart={productsInCart} />
         </div>
     )
 }

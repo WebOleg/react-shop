@@ -5,6 +5,7 @@ import CloseIcon from '@mui/icons-material/Close'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import { Link } from 'react-router-dom'
 import productsArray, { getProductsObject } from 'utils/productsArray'
+import CartTotal from 'components/CartTotal/CartTotal'
 
 const CartHeader = ({
     productsInCart,
@@ -47,16 +48,7 @@ const CartHeader = ({
                                 </div>
                             ))}
                         </div>
-                        <div className="total">
-                            Total:
-                            {Object.keys(productsInCart).reduce(
-                                (sum, id) =>
-                                    sum +
-                                    productsObject[id].price *
-                                        productsInCart[id],
-                                0
-                            )}
-                        </div>
+                        <CartTotal productsInCart={productsInCart} />
                     </div>
                 </div>
             )}
