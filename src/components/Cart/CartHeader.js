@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import productsArray from 'utils/productsArray'
 import './Pop-up.scss'
+import './CartHeader.scss'
 import CloseIcon from '@mui/icons-material/Close'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import { Link } from 'react-router-dom'
@@ -18,7 +19,10 @@ const CartHeader = ({ productsInCart }) => {
     const [popUpShow, setPopUpShow] = useState(false)
     return (
         <div>
-            <ShoppingCartIcon onClick={() => setPopUpShow(true)} />
+            <div className="cart_menu">
+                <ShoppingCartIcon onClick={() => setPopUpShow(true)} />
+                <span>1</span>
+            </div>
             {popUpShow && (
                 <div className="card-modal">
                     <div className="card-item">
