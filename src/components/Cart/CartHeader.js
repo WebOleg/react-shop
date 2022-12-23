@@ -1,26 +1,21 @@
 import React, { useState } from 'react'
-import productsArray from 'utils/productsArray'
 import './Pop-up.scss'
 import './CartHeader.scss'
 import CloseIcon from '@mui/icons-material/Close'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import { Link } from 'react-router-dom'
+import productsArray, { getProductsObject } from 'utils/productsArray'
 
-const productsObject = productsArray.reduce(
-    (object, product) => ({
-        ...object,
-        [product.id]: product,
-    }),
-    {}
-)
-console.log(productsArray)
-console.log(productsObject)
-const CartHeader = ({ productsInCart }) => {
+const CartHeader = ({
+    productsInCart,
+    productsObject = getProductsObject(productsArray),
+}) => {
     const [popUpShow, setPopUpShow] = useState(false)
     const productsCount = Object.keys(productsInCart).reduce(
         (sum, id) => sum + productsInCart[id],
         0
     )
+
     return (
         <div>
             <div className="cart_menu">

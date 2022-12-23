@@ -33,3 +33,12 @@ const productsArray = [
     },
 ]
 export default productsArray
+
+export const getProductsObject = (array) =>
+    array.reduce(
+        (obj, product) => ({
+            ...obj,
+            [product.id]: product,
+        }),
+        {}
+    )

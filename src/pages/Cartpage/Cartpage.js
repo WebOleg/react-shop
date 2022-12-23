@@ -1,13 +1,10 @@
 import React from 'react'
-import productsArray from 'utils/productsArray'
-const productsObject = productsArray.reduce(
-    (object, product) => ({
-        ...object,
-        [product.id]: product,
-    }),
-    {}
-)
-const Cartpage = ({ productsInCart }) => {
+import productsArray, { getProductsObject } from 'utils/productsArray'
+
+const Cartpage = ({
+    productsInCart,
+    productsObject = getProductsObject(productsArray),
+}) => {
     return (
         <div className="card-item">
             <h1>Cart</h1>
