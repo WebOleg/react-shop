@@ -6,6 +6,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import { Link } from 'react-router-dom'
 import productsArray, { getProductsObject } from 'utils/productsArray'
 import CartTotal from 'components/CartTotal/CartTotal'
+import CartProductList from 'components/CartProductList/CartProductList'
 
 const CartHeader = ({
     productsInCart,
@@ -40,14 +41,7 @@ const CartHeader = ({
                             <CloseIcon onClick={() => setPopUpShow(false)} />
                         </div>
                         <h1>Cart</h1>
-                        <div className="list">
-                            {Object.keys(productsInCart).map((productId) => (
-                                <div key={productId}>
-                                    {productsObject[productId].title}:
-                                    {productsInCart[productId]}
-                                </div>
-                            ))}
-                        </div>
+                        <CartProductList productsInCart={productsInCart} />
                         <CartTotal productsInCart={productsInCart} />
                     </div>
                 </div>
