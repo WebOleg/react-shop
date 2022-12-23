@@ -17,11 +17,15 @@ console.log(productsArray)
 console.log(productsObject)
 const CartHeader = ({ productsInCart }) => {
     const [popUpShow, setPopUpShow] = useState(false)
+    const productsCount = Object.keys(productsInCart).reduce(
+        (sum, id) => sum + productsInCart[id],
+        0
+    )
     return (
         <div>
             <div className="cart_menu">
                 <ShoppingCartIcon onClick={() => setPopUpShow(true)} />
-                <span>1</span>
+                <span>{productsCount}</span>
             </div>
             {popUpShow && (
                 <div className="card-modal">
