@@ -10,6 +10,7 @@ const menu = () => {
             <MenuItem link="/contact">Contact</MenuItem>
             <MenuItem link="/about">About</MenuItem>
             <MenuItem link="/products">Products</MenuItem>
+            <MenuItem link="/cart">Cart</MenuItem>
         </>
     )
 }
