@@ -16,6 +16,8 @@ const Main = ({
     addProductToCart,
     productsInCart,
     changeProductQuantity,
+    addLike,
+    removeLike,
 }) => {
     return (
         <>
@@ -28,6 +30,8 @@ const Main = ({
                         path="/products"
                         element={
                             <Products
+                                addLike={addLike}
+                                removeLike={removeLike}
                                 productsLike={productsLike}
                                 addProductToCart={addProductToCart}
                             />

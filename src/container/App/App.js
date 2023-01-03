@@ -26,13 +26,27 @@ const App = () => {
             [id]: count,
         }))
 
-    const [productsLike, setProductsLike] = useState({ 1: true, 2: true })
+    const [productsLike, setProductsLike] = useState({})
+
+    const addLike = (id) =>
+        setProductsLike((prevState) => ({
+            ...prevState,
+            [id]: true,
+        }))
+
+    const removeLike = (id) =>
+        setProductsLike((prevState) => ({
+            ...prevState,
+            [id]: false,
+        }))
     return (
         <>
             <StyledEngineProvider injectFirst>
                 <CssBaseline />
                 <Header productsInCart={productsInCart} />
                 <Main
+                    addLike={addLike}
+                    removeLike={removeLike}
                     productsLike={productsLike}
                     changeProductQuantity={changeProductQuantity}
                     productsInCart={productsInCart}

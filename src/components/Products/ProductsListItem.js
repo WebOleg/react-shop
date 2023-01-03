@@ -21,6 +21,8 @@ const ProductsListItem = ({
     addProductToCart,
     id,
     isLiked,
+    addLike,
+    removeLike,
 }) => {
     const [count, setCount] = useState(1)
 
@@ -35,7 +37,9 @@ const ProductsListItem = ({
         <>
             <Card>
                 <CardContent>
-                    <Button>
+                    <Button
+                        onClick={() => (isLiked ? removeLike(id) : addLike(id))}
+                    >
                         {isLiked ? (
                             <FavoriteIcon></FavoriteIcon>
                         ) : (
