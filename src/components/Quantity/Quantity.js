@@ -1,11 +1,11 @@
 import React from 'react'
 import { Button, TextField } from '@mui/material'
 
-const Quantity = ({ onIncrement, onDecrement, count }) => {
+const Quantity = ({ minCount, onIncrement, onDecrement, count }) => {
     return (
         <div className="cardinf product-quantity">
             <Button
-                disabled={count <= 1}
+                disabled={count <= minCount}
                 onClick={() => onDecrement()}
                 size="large"
                 variant="outlined"

@@ -16,7 +16,9 @@ const CartProductListItemExtanded = ({
         <Card className="card-item">
             <CardContent className="content">
                 <div className="name">{product.title}</div>
-                <img src={product.image}></img>
+                <div className="center">
+                    <img src={product.image}></img>
+                </div>
                 <div className="price">
                     For one item - <strong>{product.price}</strong>
                 </div>
@@ -24,7 +26,14 @@ const CartProductListItemExtanded = ({
                     Count: <strong>{count}</strong>
                 </div>
                 <Quantity
-                    onDecrement={() => onDecrementObject(product.id)}
+                    minCount={0}
+                    onDecrement={() => {
+                        if (count <= 1) {
+                            removeProductFromCart(product.id)
+                        } else {
+                            onDecrementObject(product.id)
+                        }
+                    }}
                     onIncrement={() => onIncrementObject(product.id)}
                     count={count}
                 ></Quantity>

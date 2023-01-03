@@ -40,6 +40,7 @@ const ProductsListItem = ({
                     <div className="cardinf">Capacity: {capacity}GB</div>
                     <div className="price cardinf">Price: {price}$</div>
                     <Quantity
+                        minCount={1}
                         onDecrement={onDecrement}
                         onIncrement={onIncrement}
                         count={count}

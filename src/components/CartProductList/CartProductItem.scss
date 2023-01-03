@@ -31,6 +31,15 @@
             svg{
                 color: black;
             }
+
+            .center{
+                display: flex;
+                justify-content: center;
+            }
+
+            .cardinf{
+                margin-bottom: 10px;
+            }
         }
     }
 }
