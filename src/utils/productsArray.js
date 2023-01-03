@@ -11,7 +11,7 @@ const productsArray = [
     },
 
     {
-        id: 555,
+        id: 2,
         image: '/images/IphonePurple.jpg',
         title: 'Iphone Xr',
         describe:

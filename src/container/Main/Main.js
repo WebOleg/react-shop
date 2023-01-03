@@ -11,6 +11,7 @@ import { Routes, Route } from 'react-router-dom'
 import Cartpage from 'pages/Cartpage/Cartpage'
 
 const Main = ({
+    productsLike,
     removeProductFromCart,
     addProductToCart,
     productsInCart,
@@ -26,7 +27,10 @@ const Main = ({
                     <Route
                         path="/products"
                         element={
-                            <Products addProductToCart={addProductToCart} />
+                            <Products
+                                productsLike={productsLike}
+                                addProductToCart={addProductToCart}
+                            />
                         }
                     />
                     <Route

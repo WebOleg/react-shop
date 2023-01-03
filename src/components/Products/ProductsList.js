@@ -4,7 +4,7 @@ import productsArray from 'utils/productsArray'
 import { Grid, Typography } from '@mui/material'
 import './ProductsList.scss'
 
-const ProductsList = ({ addProductToCart }) => {
+const ProductsList = ({ productsLike, addProductToCart }) => {
     return (
         <>
             <Typography variant="h4" className="productTitle">
@@ -28,6 +28,7 @@ const ProductsList = ({ addProductToCart }) => {
                                 type={type}
                                 price={price}
                                 capacity={capacity}
+                                isLiked={productsLike[id]}
                                 addProductToCart={addProductToCart}
                             />
                         </Grid>

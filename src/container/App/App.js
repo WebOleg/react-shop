@@ -25,12 +25,15 @@ const App = () => {
             ...prevState,
             [id]: count,
         }))
+
+    const [productsLike, setProductsLike] = useState({ 1: true, 2: true })
     return (
         <>
             <StyledEngineProvider injectFirst>
                 <CssBaseline />
                 <Header productsInCart={productsInCart} />
                 <Main
+                    productsLike={productsLike}
                     changeProductQuantity={changeProductQuantity}
                     productsInCart={productsInCart}
                     addProductToCart={addProductToCart}

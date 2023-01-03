@@ -8,6 +8,8 @@ import {
 import Quantity from 'components/Quantity/Quantity'
 import React, { useState } from 'react'
 import './ProductsListItem.scss'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import FavoriteIcon from '@mui/icons-material/Favorite'
 
 const ProductsListItem = ({
     image,
@@ -18,6 +20,7 @@ const ProductsListItem = ({
     price,
     addProductToCart,
     id,
+    isLiked,
 }) => {
     const [count, setCount] = useState(1)
 
@@ -27,10 +30,18 @@ const ProductsListItem = ({
     const onIncrement = () => {
         setCount((prevState) => prevState + 1)
     }
+
     return (
         <>
             <Card>
                 <CardContent>
+                    <Button>
+                        {isLiked ? (
+                            <FavoriteIcon></FavoriteIcon>
+                        ) : (
+                            <FavoriteBorderIcon></FavoriteBorderIcon>
+                        )}
+                    </Button>
                     <div className="product-img">
                         <img src={image}></img>
                     </div>
