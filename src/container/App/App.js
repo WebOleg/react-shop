@@ -13,11 +13,24 @@ const App = () => {
             [id]: (prevState[id] || 0) + count,
         }))
     }
+    const removeProductFromCart = (id) => {
+        setProductsInCart((prevState) => {
+            // const prevProductsInCart = {
+            //     ...prevState,
+            // }
+            const prevProductsInCart = Object.assign({}, prevState)
+            delete prevProductsInCart[id]
+            return prevProductsInCart
+        })
+    }
     return (
         <>
             <StyledEngineProvider injectFirst>
                 <CssBaseline />
                 <Header productsInCart={productsInCart} />
+                <Button onClick={() => removeProductFromCart(1)}>
+                    removeProductFromCart
+                </Button>
                 <Main
                     productsInCart={productsInCart}
                     addProductToCart={addProductToCart}
