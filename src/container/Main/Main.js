@@ -11,11 +11,10 @@ import { Routes, Route } from 'react-router-dom'
 import Cartpage from 'pages/Cartpage/Cartpage'
 
 const Main = ({
-    onDecrementObject,
-    onIncrementObject,
     removeProductFromCart,
     addProductToCart,
     productsInCart,
+    changeProductQuantity,
 }) => {
     return (
         <>
@@ -34,8 +33,7 @@ const Main = ({
                         path="/cart"
                         element={
                             <Cartpage
-                                onDecrementObject={onDecrementObject}
-                                onIncrementObject={onIncrementObject}
+                                changeProductQuantity={changeProductQuantity}
                                 productsInCart={productsInCart}
                                 removeProductFromCart={removeProductFromCart}
                             />

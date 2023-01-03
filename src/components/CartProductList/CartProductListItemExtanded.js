@@ -6,11 +6,10 @@ import DeleteIcon from '@mui/icons-material/Delete'
 import Quantity from 'components/Quantity/Quantity'
 
 const CartProductListItemExtanded = ({
-    onDecrementObject,
-    onIncrementObject,
     removeProductFromCart,
     count,
     product,
+    changeProductQuantity,
 }) => {
     return (
         <Card className="card-item">
@@ -31,10 +30,12 @@ const CartProductListItemExtanded = ({
                         if (count <= 1) {
                             removeProductFromCart(product.id)
                         } else {
-                            onDecrementObject(product.id)
+                            changeProductQuantity(product.id, count - 1)
                         }
                     }}
-                    onIncrement={() => onIncrementObject(product.id)}
+                    onIncrement={() =>
+                        changeProductQuantity(product.id, count + 1)
+                    }
                     count={count}
                 ></Quantity>
                 <Button

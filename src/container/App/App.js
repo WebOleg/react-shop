@@ -20,26 +20,18 @@ const App = () => {
         })
     }
 
-    const onDecrementObject = (id) => {
+    const changeProductQuantity = (id, count) =>
         setProductsInCart((prevState) => ({
             ...prevState,
-            [id]: prevState[id] - 1,
+            [id]: count,
         }))
-    }
-    const onIncrementObject = (id) => {
-        setProductsInCart((prevState) => ({
-            ...prevState,
-            [id]: prevState[id] + 1,
-        }))
-    }
     return (
         <>
             <StyledEngineProvider injectFirst>
                 <CssBaseline />
                 <Header productsInCart={productsInCart} />
                 <Main
-                    onDecrementObject={onDecrementObject}
-                    onIncrementObject={onIncrementObject}
+                    changeProductQuantity={changeProductQuantity}
                     productsInCart={productsInCart}
                     addProductToCart={addProductToCart}
                     removeProductFromCart={removeProductFromCart}

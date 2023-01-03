@@ -5,17 +5,15 @@ import CartProductList from 'components/CartProductList/CartProductList'
 import CartProductListItemExtanded from 'components/CartProductList/CartProductListItemExtanded'
 
 const Cartpage = ({
-    onIncrementObject,
-    onDecrementObject,
     removeProductFromCart,
     productsInCart,
+    changeProductQuantity,
 }) => {
     return (
         <div className="card-item">
             <h1>Cart</h1>
             <CartProductList
-                onDecrementObject={onDecrementObject}
-                onIncrementObject={onIncrementObject}
+                changeProductQuantity={changeProductQuantity}
                 CartItem={CartProductListItemExtanded}
                 productsInCart={productsInCart}
                 removeProductFromCart={removeProductFromCart}
