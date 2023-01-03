@@ -5,6 +5,7 @@ import {
     Button,
     TextField,
 } from '@mui/material'
+import Quantity from 'components/Quantity/Quantity'
 import React, { useState } from 'react'
 import './ProductsListItem.scss'
 
@@ -38,25 +39,11 @@ const ProductsListItem = ({
                     <div className="cardinf">Type: {type}</div>
                     <div className="cardinf">Capacity: {capacity}GB</div>
                     <div className="price cardinf">Price: {price}$</div>
-                    <div className="cardinf product-quantity">
-                        <Button
-                            disabled={count <= 1}
-                            onClick={onDecrement}
-                            size="large"
-                            variant="outlined"
-                        >
-                            -
-                        </Button>
-                        <TextField value={count} readOnly size="small" />
-                        <Button
-                            disabled={count >= 10}
-                            onClick={onIncrement}
-                            size="large"
-                            variant="outlined"
-                        >
-                            +
-                        </Button>
-                    </div>
+                    <Quantity
+                        onDecrement={onDecrement}
+                        onIncrement={onIncrement}
+                        count={count}
+                    ></Quantity>
                 </CardContent>
                 <CardActions className="wrap-btn">
                     <Button

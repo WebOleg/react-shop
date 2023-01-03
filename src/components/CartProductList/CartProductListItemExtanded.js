@@ -1,10 +1,13 @@
 import { ClassNames } from '@emotion/react'
-import { Card, CardContent, Button } from '@mui/material'
+import { Card, CardContent, Button, TextField } from '@mui/material'
 import React from 'react'
 import './CartProductItem.scss'
 import DeleteIcon from '@mui/icons-material/Delete'
+import Quantity from 'components/Quantity/Quantity'
 
 const CartProductListItemExtanded = ({
+    onDecrementObject,
+    onIncrementObject,
     removeProductFromCart,
     count,
     product,
@@ -20,6 +23,11 @@ const CartProductListItemExtanded = ({
                 <div className="count">
                     Count: <strong>{count}</strong>
                 </div>
+                <Quantity
+                    onDecrement={() => onDecrementObject(product.id)}
+                    onIncrement={() => onIncrementObject(product.id)}
+                    count={count}
+                ></Quantity>
                 <Button
                     variant="outlined"
                     onClick={() => removeProductFromCart(product.id)}

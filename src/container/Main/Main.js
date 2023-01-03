@@ -10,7 +10,13 @@ import Products from 'pages/Products/Products'
 import { Routes, Route } from 'react-router-dom'
 import Cartpage from 'pages/Cartpage/Cartpage'
 
-const Main = ({ removeProductFromCart, addProductToCart, productsInCart }) => {
+const Main = ({
+    onDecrementObject,
+    onIncrementObject,
+    removeProductFromCart,
+    addProductToCart,
+    productsInCart,
+}) => {
     return (
         <>
             <Container>
@@ -28,6 +34,8 @@ const Main = ({ removeProductFromCart, addProductToCart, productsInCart }) => {
                         path="/cart"
                         element={
                             <Cartpage
+                                onDecrementObject={onDecrementObject}
+                                onIncrementObject={onIncrementObject}
                                 productsInCart={productsInCart}
                                 removeProductFromCart={removeProductFromCart}
                             />

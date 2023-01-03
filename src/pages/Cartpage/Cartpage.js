@@ -4,11 +4,18 @@ import CartTotal from 'components/CartTotal/CartTotal'
 import CartProductList from 'components/CartProductList/CartProductList'
 import CartProductListItemExtanded from 'components/CartProductList/CartProductListItemExtanded'
 
-const Cartpage = ({ removeProductFromCart, productsInCart }) => {
+const Cartpage = ({
+    onIncrementObject,
+    onDecrementObject,
+    removeProductFromCart,
+    productsInCart,
+}) => {
     return (
         <div className="card-item">
             <h1>Cart</h1>
             <CartProductList
+                onDecrementObject={onDecrementObject}
+                onIncrementObject={onIncrementObject}
                 CartItem={CartProductListItemExtanded}
                 productsInCart={productsInCart}
                 removeProductFromCart={removeProductFromCart}
