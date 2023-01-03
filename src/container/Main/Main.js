@@ -10,7 +10,7 @@ import Products from 'pages/Products/Products'
 import { Routes, Route } from 'react-router-dom'
 import Cartpage from 'pages/Cartpage/Cartpage'
 
-const Main = ({ addProductToCart, productsInCart }) => {
+const Main = ({ removeProductFromCart, addProductToCart, productsInCart }) => {
     return (
         <>
             <Container>
@@ -26,7 +26,12 @@ const Main = ({ addProductToCart, productsInCart }) => {
                     />
                     <Route
                         path="/cart"
-                        element={<Cartpage productsInCart={productsInCart} />}
+                        element={
+                            <Cartpage
+                                productsInCart={productsInCart}
+                                removeProductFromCart={removeProductFromCart}
+                            />
+                        }
                     />
                     <Route path="/articles/:id" element={<Article />} />
                 </Routes>

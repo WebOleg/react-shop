@@ -15,10 +15,10 @@ const App = () => {
     }
     const removeProductFromCart = (id) => {
         setProductsInCart((prevState) => {
-            // const prevProductsInCart = {
-            //     ...prevState,
-            // }
-            const prevProductsInCart = Object.assign({}, prevState)
+            const prevProductsInCart = {
+                ...prevState,
+            }
+            // const prevProductsInCart = Object.assign({}, prevState)
             delete prevProductsInCart[id]
             return prevProductsInCart
         })
@@ -28,12 +28,10 @@ const App = () => {
             <StyledEngineProvider injectFirst>
                 <CssBaseline />
                 <Header productsInCart={productsInCart} />
-                <Button onClick={() => removeProductFromCart(1)}>
-                    removeProductFromCart
-                </Button>
                 <Main
                     productsInCart={productsInCart}
                     addProductToCart={addProductToCart}
+                    removeProductFromCart={removeProductFromCart}
                 />
             </StyledEngineProvider>
         </>

@@ -4,7 +4,11 @@ import React from 'react'
 import './CartProductItem.scss'
 import DeleteIcon from '@mui/icons-material/Delete'
 
-const CartProductListItemExtanded = ({ count, product }) => {
+const CartProductListItemExtanded = ({
+    removeProductFromCart,
+    count,
+    product,
+}) => {
     return (
         <Card className="card-item">
             <CardContent className="content">
@@ -16,7 +20,10 @@ const CartProductListItemExtanded = ({ count, product }) => {
                 <div className="count">
                     Count: <strong>{count}</strong>
                 </div>
-                <Button>
+                <Button
+                    variant="outlined"
+                    onClick={() => removeProductFromCart(product.id)}
+                >
                     <DeleteIcon></DeleteIcon>
                 </Button>
             </CardContent>
