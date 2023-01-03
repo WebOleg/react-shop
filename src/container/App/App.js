@@ -4,6 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { StyledEngineProvider } from '@mui/material/styles'
 import Main from 'container/Main/Main'
 import { Button } from '@mui/material'
+import { omit } from 'lodash'
 
 const App = () => {
     const [productsInCart, setProductsInCart] = useState({})
@@ -15,12 +16,7 @@ const App = () => {
     }
     const removeProductFromCart = (id) => {
         setProductsInCart((prevState) => {
-            const prevProductsInCart = {
-                ...prevState,
-            }
-            // const prevProductsInCart = Object.assign({}, prevState)
-            delete prevProductsInCart[id]
-            return prevProductsInCart
+            return omit(prevState, [id])
         })
     }
     return (
