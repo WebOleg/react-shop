@@ -31,12 +31,9 @@ const App = () => {
     const toggleLike = (id) => {
         setProductsLike((prevState) => {
             if (prevState[id]) {
-                return {
-                    ...prevState,
-                    [id]: false,
-                }
+                return Object.assign({}, prevState, { [id]: false })
             } else {
-                return { ...prevState, [id]: true }
+                return Object.assign({}, prevState, { [id]: true })
             }
         })
     }
