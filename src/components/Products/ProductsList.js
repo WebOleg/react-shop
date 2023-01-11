@@ -9,6 +9,7 @@ const ProductsList = ({
     removeLike,
     productsLike,
     addProductToCart,
+    toggleLike,
 }) => {
     return (
         <>
@@ -36,6 +37,7 @@ const ProductsList = ({
                                 isLiked={productsLike[id]}
                                 addLike={addLike}
                                 removeLike={removeLike}
+                                toggleLike={toggleLike}
                                 addProductToCart={addProductToCart}
                             />
                         </Grid>

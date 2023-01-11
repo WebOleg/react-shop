@@ -28,6 +28,19 @@ const App = () => {
 
     const [productsLike, setProductsLike] = useState({})
 
+    const toggleLike = (id) => {
+        setProductsLike((prevState) => {
+            if (prevState[id]) {
+                return {
+                    ...prevState,
+                    [id]: false,
+                }
+            } else {
+                return { ...prevState, [id]: true }
+            }
+        })
+    }
+
     const addLike = (id) =>
         setProductsLike((prevState) => ({
             ...prevState,
@@ -39,6 +52,7 @@ const App = () => {
             ...prevState,
             [id]: false,
         }))
+    console.log(productsLike)
     return (
         <>
             <StyledEngineProvider injectFirst>
@@ -48,6 +62,7 @@ const App = () => {
                     addLike={addLike}
                     removeLike={removeLike}
                     productsLike={productsLike}
+                    toggleLike={toggleLike}
                     changeProductQuantity={changeProductQuantity}
                     productsInCart={productsInCart}
                     addProductToCart={addProductToCart}
