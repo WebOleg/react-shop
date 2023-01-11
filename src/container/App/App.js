@@ -28,27 +28,22 @@ const App = () => {
 
     const [productsLike, setProductsLike] = useState({})
 
+    // const toggleLike = (id) => {
+    //     setProductsLike((prevState) => {
+    //         if (prevState[id]) {
+    //             return Object.assign({}, prevState, { [id]: false })
+    //         } else {
+    //             return Object.assign({}, prevState, { [id]: true })
+    //         }
+    //     })
+    // }
+
     const toggleLike = (id) => {
-        setProductsLike((prevState) => {
-            if (prevState[id]) {
-                return Object.assign({}, prevState, { [id]: false })
-            } else {
-                return Object.assign({}, prevState, { [id]: true })
-            }
-        })
+        setProductsLike((prevState) => ({
+            ...prevState,
+            [id]: !prevState[id],
+        }))
     }
-
-    const addLike = (id) =>
-        setProductsLike((prevState) => ({
-            ...prevState,
-            [id]: true,
-        }))
-
-    const removeLike = (id) =>
-        setProductsLike((prevState) => ({
-            ...prevState,
-            [id]: false,
-        }))
     console.log(productsLike)
     return (
         <>
@@ -56,8 +51,6 @@ const App = () => {
                 <CssBaseline />
                 <Header productsInCart={productsInCart} />
                 <Main
-                    addLike={addLike}
-                    removeLike={removeLike}
                     productsLike={productsLike}
                     toggleLike={toggleLike}
                     changeProductQuantity={changeProductQuantity}

@@ -11,8 +11,6 @@ const Products = ({
     return (
         <>
             <ProductsList
-                addLike={addLike}
-                removeLike={removeLike}
                 productsLike={productsLike}
                 toggleLike={toggleLike}
                 addProductToCart={addProductToCart}

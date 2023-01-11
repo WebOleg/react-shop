@@ -21,8 +21,6 @@ const ProductsListItem = ({
     addProductToCart,
     id,
     isLiked,
-    addLike,
-    removeLike,
     toggleLike,
 }) => {
     const [count, setCount] = useState(1)
