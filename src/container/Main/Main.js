@@ -42,6 +42,8 @@ const Main = ({
                                 changeProductQuantity={changeProductQuantity}
                                 productsInCart={productsInCart}
                                 removeProductFromCart={removeProductFromCart}
+                                productsLike={productsLike}
+                                toggleLike={toggleLike}
                             />
                         }
                     />

@@ -4,16 +4,27 @@ import React from 'react'
 import './CartProductItem.scss'
 import DeleteIcon from '@mui/icons-material/Delete'
 import Quantity from 'components/Quantity/Quantity'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import FavoriteIcon from '@mui/icons-material/Favorite'
 
 const CartProductListItemExtanded = ({
     removeProductFromCart,
     count,
     product,
     changeProductQuantity,
+    productsLike,
+    toggleLike,
 }) => {
     return (
         <Card className="card-item">
             <CardContent className="content">
+                <Button onClick={() => toggleLike(product.id)}>
+                    {productsLike[product.id] ? (
+                        <FavoriteIcon></FavoriteIcon>
+                    ) : (
+                        <FavoriteBorderIcon></FavoriteBorderIcon>
+                    )}
+                </Button>
                 <div className="name">{product.title}</div>
                 <div className="center">
                     <img src={product.image}></img>

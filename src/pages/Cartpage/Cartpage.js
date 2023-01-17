@@ -8,6 +8,8 @@ const Cartpage = ({
     removeProductFromCart,
     productsInCart,
     changeProductQuantity,
+    productsLike,
+    toggleLike,
 }) => {
     return (
         <div className="card-item">
@@ -17,6 +19,8 @@ const Cartpage = ({
                 CartItem={CartProductListItemExtanded}
                 productsInCart={productsInCart}
                 removeProductFromCart={removeProductFromCart}
+                productsLike={productsLike}
+                toggleLike={toggleLike}
             />
             <CartTotal productsInCart={productsInCart} />
         </div>

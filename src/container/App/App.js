@@ -44,7 +44,7 @@ const App = () => {
             [id]: !prevState[id],
         }))
     }
-    console.log(productsLike)
+
     return (
         <>
             <StyledEngineProvider injectFirst>

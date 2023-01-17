@@ -1,13 +1,7 @@
 import ProductsList from 'components/Products/ProductsList'
 import React from 'react'
 
-const Products = ({
-    addLike,
-    removeLike,
-    productsLike,
-    addProductToCart,
-    toggleLike,
-}) => {
+const Products = ({ productsLike, addProductToCart, toggleLike }) => {
     return (
         <>
             <ProductsList
