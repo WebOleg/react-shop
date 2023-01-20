@@ -1,3 +1,47 @@
+.liked{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2%;
+    .card-item{
+        width: 31%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 35px;
+        .content{
+            display: flex;
+            flex-direction: column;
+            .name{
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            .price{
+                margin-top: 15px;
+                text-align: left;
+                margin-bottom: 15px;
+            }
+            img{
+                width: 250px;
+                height: 300px;
+            }
+            .count{
+                margin-bottom: 10px;
+            }
+            svg{
+                color: black;
+            }
+            .center{
+                display: flex;
+                justify-content: center;
+            }
+            .cardinf{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
 .group{
     display: flex;
     flex-wrap: wrap;
@@ -26,20 +70,16 @@
                 width: 250px;
                 height: 300px;
             }
-
             .count{
                 margin-bottom: 10px;
             }
-            
             svg{
                 color: black;
             }
-
             .center{
                 display: flex;
                 justify-content: center;
             }
-
             .cardinf{
                 margin-bottom: 10px;
             }
