@@ -9,6 +9,7 @@ import Home from 'pages/Home/Home'
 import Products from 'pages/Products/Products'
 import { Routes, Route } from 'react-router-dom'
 import Cartpage from 'pages/Cartpage/Cartpage'
+import Favourite from 'pages/Favourite/Favourite'
 
 const Main = ({
     productsLike,
@@ -35,6 +36,15 @@ const Main = ({
                             />
                         }
                     />
+                    <Route
+                        path="/favourite"
+                        element={
+                            <Favourite
+                                toggleLike={toggleLike}
+                                productsLike={productsLike}
+                            />
+                        }
+                    ></Route>
                     <Route
                         path="/cart"
                         element={
