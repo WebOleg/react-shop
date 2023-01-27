@@ -3,10 +3,13 @@ import React from 'react'
 import productsArray from 'utils/productsArray'
 import ProductsListItem from 'components/Products/ProductsListItem'
 import './Category.scss'
+import { useParams } from 'react-router'
 
 const Category = () => {
+    const categoryName = useParams()
+    console.log(categoryName)
     const filteredArray = productsArray.filter(function (product) {
-        return product.category == 'apple'
+        return product.category == categoryName.category
     })
 
     return (
