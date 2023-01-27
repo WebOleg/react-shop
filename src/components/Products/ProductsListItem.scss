@@ -10,6 +10,7 @@
     text-align: center;
     img{
         width: 150px;
+        max-height: 182px;
     }
 }
 
@@ -26,6 +27,14 @@
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
+}
+
+.cardinf a{
+    color: black;
+}
+
+.cardinf a:hover{
+    color: blue;
 }
 
 

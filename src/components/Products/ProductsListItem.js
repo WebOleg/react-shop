@@ -10,6 +10,8 @@ import React, { useState } from 'react'
 import './ProductsListItem.scss'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import FavoriteIcon from '@mui/icons-material/Favorite'
+import { Category } from '@mui/icons-material'
+import { Link } from 'react-router-dom'
 
 const ProductsListItem = ({
     image,
@@ -20,6 +22,7 @@ const ProductsListItem = ({
     price,
     addProductToCart,
     id,
+    category,
     isLiked,
     toggleLike,
 }) => {
@@ -50,6 +53,9 @@ const ProductsListItem = ({
                     <p className="cardinf">{describe}</p>
                     <div className="cardinf">Type: {type}</div>
                     <div className="cardinf">Capacity: {capacity}GB</div>
+                    <div className="cardinf cat_link">
+                        Category: <Link to={`${category}`}>{category}</Link>
+                    </div>
                     <div className="price cardinf">Price: {price}$</div>
                     <Quantity
                         minCount={1}

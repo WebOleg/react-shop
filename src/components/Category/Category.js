@@ -1,15 +1,16 @@
+import { Button, Card, CardContent, Grid } from '@mui/material'
 import React from 'react'
-import ProductsListItem from './ProductsListItem'
 import productsArray from 'utils/productsArray'
-import { Grid, Typography } from '@mui/material'
-import './ProductsList.scss'
+import ProductsListItem from 'components/Products/ProductsListItem'
+import './Category.scss'
 
-const ProductsList = ({ productsLike, addProductToCart, toggleLike }) => {
+const Category = () => {
+    const filteredArray = productsArray.filter(function (product) {
+        return product.category == 'apple'
+    })
+
     return (
-        <>
-            <Typography variant="h4" className="productTitle">
-                Products List
-            </Typography>
+        <section>
             <Grid
                 container
                 spacing={4}
@@ -17,18 +18,18 @@ const ProductsList = ({ productsLike, addProductToCart, toggleLike }) => {
                 justifyContent="center"
                 alignItems="center"
             >
-                {productsArray.map(
+                {filteredArray.map(
                     ({
                         id,
                         image,
+                        category,
                         title,
                         describe,
                         type,
                         price,
                         capacity,
-                        category,
                     }) => (
-                        <Grid key={id} sm={4} item>
+                        <Grid sm={4} item>
                             <ProductsListItem
                                 id={id}
                                 image={image}
@@ -38,16 +39,16 @@ const ProductsList = ({ productsLike, addProductToCart, toggleLike }) => {
                                 type={type}
                                 price={price}
                                 capacity={capacity}
-                                isLiked={productsLike[id]}
-                                toggleLike={toggleLike}
-                                addProductToCart={addProductToCart}
-                            />
+                                // isLiked={productsLike[id]}
+                                // toggleLike={toggleLike}
+                                // addProductToCart={addProductToCart}
+                            ></ProductsListItem>
                         </Grid>
                     )
                 )}
             </Grid>
-        </>
+        </section>
     )
 }
 
-export default ProductsList
+export default Category

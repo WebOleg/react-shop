@@ -10,6 +10,7 @@ import Products from 'pages/Products/Products'
 import { Routes, Route } from 'react-router-dom'
 import Cartpage from 'pages/Cartpage/Cartpage'
 import Favourite from 'pages/Favourite/Favourite'
+import Categories from 'pages/Categories/Categories'
 
 const Main = ({
     productsLike,
@@ -56,6 +57,10 @@ const Main = ({
                                 toggleLike={toggleLike}
                             />
                         }
+                    />
+                    <Route
+                        path="/products/:category"
+                        element={<Categories />}
                     />
                     <Route path="/articles/:id" element={<Article />} />
                 </Routes>
