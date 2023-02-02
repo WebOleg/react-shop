@@ -32,7 +32,7 @@ const Category = () => {
                         price,
                         capacity,
                     }) => (
-                        <Grid sm={4} item>
+                        <Grid key={id} sm={4} item>
                             <ProductsListItem
                                 id={id}
                                 image={image}
