@@ -3,7 +3,7 @@ import React from 'react'
 const CartProductListItem = ({ product, count }) => {
     console.log(product)
     return (
-        <div>
+        <div className="cart_item">
             {product.title}:{count}
         </div>
     )

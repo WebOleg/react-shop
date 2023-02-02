@@ -5,7 +5,7 @@ import ProductsListItem from 'components/Products/ProductsListItem'
 import './Category.scss'
 import { useParams } from 'react-router'
 
-const Category = () => {
+const Category = ({ toggleLike, productsLike, addProductToCart }) => {
     const categoryName = useParams()
     console.log(categoryName)
     const filteredArray = productsArray.filter(function (product) {
@@ -42,9 +42,9 @@ const Category = () => {
                                 type={type}
                                 price={price}
                                 capacity={capacity}
-                                // isLiked={productsLike[id]}
-                                // toggleLike={toggleLike}
-                                // addProductToCart={addProductToCart}
+                                isLiked={productsLike[id]}
+                                toggleLike={toggleLike}
+                                addProductToCart={addProductToCart}
                             ></ProductsListItem>
                         </Grid>
                     )

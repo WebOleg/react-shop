@@ -60,7 +60,13 @@ const Main = ({
                     />
                     <Route
                         path="/products/:category"
-                        element={<Categories />}
+                        element={
+                            <Categories
+                                toggleLike={toggleLike}
+                                productsLike={productsLike}
+                                addProductToCart={addProductToCart}
+                            />
+                        }
                     />
                     <Route path="/articles/:id" element={<Article />} />
                 </Routes>

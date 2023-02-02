@@ -13,7 +13,7 @@ const CartProductList = ({
     CartItem = CartProductListItem,
 }) => {
     return (
-        <div className="container group">
+        <div className="container">
             {Object.keys(productsInCart).map((productId) => (
                 <CartItem
                     toggleLike={toggleLike}

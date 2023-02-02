@@ -46,7 +46,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-   
     .card-item{
         width: 350px;
         display: flex;
@@ -87,3 +86,6 @@
     }
 }
 
+.cart_item{
+    margin-bottom: 10px;
+}

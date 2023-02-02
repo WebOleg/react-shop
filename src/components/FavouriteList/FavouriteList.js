@@ -39,7 +39,7 @@ const FavouriteList = ({
                                 ></img>
                             </div>
                             <div className="price">
-                                For one item -
+                                Price for one item:{' '}
                                 <strong>
                                     {productsObject[productsLikeId].price}
                                 </strong>
