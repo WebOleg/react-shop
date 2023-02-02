@@ -49,7 +49,9 @@ const ProductsListItem = ({
                     <div className="product-img">
                         <img src={image}></img>
                     </div>
-                    <h4 className="cardinf">{title}</h4>
+                    <h4 className="cardinf">
+                        <Link to={`/products/${category}/${id}`}>{title}</Link>
+                    </h4>
                     <p className="cardinf">{describe}</p>
                     <div className="cardinf">Type: {type}</div>
                     <div className="cardinf">Capacity: {capacity}GB</div>

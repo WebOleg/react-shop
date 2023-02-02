@@ -11,6 +11,7 @@ import { Routes, Route } from 'react-router-dom'
 import Cartpage from 'pages/Cartpage/Cartpage'
 import Favourite from 'pages/Favourite/Favourite'
 import Categories from 'pages/Categories/Categories'
+import ProductPage from 'pages/ProductPage/ProductPage'
 
 const Main = ({
     productsLike,
@@ -27,16 +28,30 @@ const Main = ({
                     <Route path="/" element={<Home />}></Route>
                     <Route path="/about" element={<About />}></Route>
                     <Route path="/contact" element={<Contact />}></Route>
-                    <Route
-                        path="/products"
-                        element={
-                            <Products
-                                productsLike={productsLike}
-                                toggleLike={toggleLike}
-                                addProductToCart={addProductToCart}
-                            />
-                        }
-                    />
+                    <Route path="/products">
+                        <Route
+                            index
+                            element={
+                                <Products
+                                    productsLike={productsLike}
+                                    toggleLike={toggleLike}
+                                    addProductToCart={addProductToCart}
+                                />
+                            }
+                        />
+                        <Route
+                            path=":category"
+                            element={
+                                <Categories
+                                    toggleLike={toggleLike}
+                                    productsLike={productsLike}
+                                    addProductToCart={addProductToCart}
+                                />
+                            }
+                        >
+                            <Route path=":id" element={<ProductPage />} />
+                        </Route>
+                    </Route>
                     <Route
                         path="/favourite"
                         element={
@@ -58,7 +73,7 @@ const Main = ({
                             />
                         }
                     />
-                    <Route
+                    {/* <Route
                         path="/products/:category"
                         element={
                             <Categories
@@ -67,7 +82,8 @@ const Main = ({
                                 addProductToCart={addProductToCart}
                             />
                         }
-                    />
+                    /> */}
+
                     <Route path="/articles/:id" element={<Article />} />
                 </Routes>
             </Container>
