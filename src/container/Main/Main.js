@@ -23,7 +23,7 @@ const Main = ({
 }) => {
     return (
         <>
-            <Container>
+            <Container className="my_container">
                 <Routes>
                     <Route path="/" element={<Home />}></Route>
                     <Route path="/about" element={<About />}></Route>
@@ -73,16 +73,6 @@ const Main = ({
                             />
                         }
                     />
-                    {/* <Route
-                        path="/products/:category"
-                        element={
-                            <Categories
-                                toggleLike={toggleLike}
-                                productsLike={productsLike}
-                                addProductToCart={addProductToCart}
-                            />
-                        }
-                    /> */}
 
                     <Route path="/articles/:id" element={<Article />} />
                 </Routes>

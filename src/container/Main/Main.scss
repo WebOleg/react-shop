@@ -1,6 +1,9 @@
-.item{
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 350px;
-    height: 350px;
+.my_container{
+    padding-top: 55px;
+    .item{
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 350px;
+        height: 350px;
+    }
 }

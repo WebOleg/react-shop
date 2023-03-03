@@ -1,4 +1,5 @@
 import React from 'react'
+import './CartProductItem.scss'
 
 const CartProductListItem = ({ product, count }) => {
     console.log(product)
