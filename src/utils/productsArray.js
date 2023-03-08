@@ -32,6 +32,12 @@ const productsArray = [
         type: 'phone',
         capacity: 564,
         category: 'samsung',
+        images: [
+            '/images/iphone_green1.webp',
+            '/images/iphone_green2.webp',
+            '/images/iphone_green3.webp',
+            '/images/iphone_green2.webp',
+        ],
     },
 
     {
@@ -46,6 +52,12 @@ const productsArray = [
         type: 'phone',
         capacity: 564,
         category: 'apple',
+        images: [
+            '/images/iphone_green1.webp',
+            '/images/iphone_green2.webp',
+            '/images/iphone_green3.webp',
+            '/images/iphone_green2.webp',
+        ],
     },
 
     {
@@ -58,6 +70,12 @@ const productsArray = [
         type: 'phone',
         capacity: 64,
         category: 'samsung',
+        images: [
+            '/images/iphone_green1.webp',
+            '/images/iphone_green2.webp',
+            '/images/iphone_green3.webp',
+            '/images/iphone_green2.webp',
+        ],
     },
 
     {
@@ -70,6 +88,12 @@ const productsArray = [
         type: 'phone',
         capacity: 128,
         category: 'samsung',
+        images: [
+            '/images/iphone_green1.webp',
+            '/images/iphone_green2.webp',
+            '/images/iphone_green3.webp',
+            '/images/iphone_green2.webp',
+        ],
     },
 
     {
@@ -82,6 +106,12 @@ const productsArray = [
         type: 'phone',
         capacity: 264,
         category: 'apple',
+        images: [
+            '/images/iphone_green1.webp',
+            '/images/iphone_green2.webp',
+            '/images/iphone_green3.webp',
+            '/images/iphone_green2.webp',
+        ],
     },
 
     {
@@ -94,6 +124,12 @@ const productsArray = [
         type: 'phone',
         capacity: 564,
         category: 'samsung',
+        images: [
+            '/images/iphone_green1.webp',
+            '/images/iphone_green2.webp',
+            '/images/iphone_green3.webp',
+            '/images/iphone_green2.webp',
+        ],
     },
 
     {
@@ -106,6 +142,12 @@ const productsArray = [
         type: 'phone',
         capacity: 564,
         category: 'xiomi',
+        images: [
+            '/images/iphone_green1.webp',
+            '/images/iphone_green2.webp',
+            '/images/iphone_green3.webp',
+            '/images/iphone_green2.webp',
+        ],
     },
 
     {
@@ -118,6 +160,12 @@ const productsArray = [
         type: 'phone',
         capacity: 128,
         category: 'apple',
+        images: [
+            '/images/iphone_green1.webp',
+            '/images/iphone_green2.webp',
+            '/images/iphone_green3.webp',
+            '/images/iphone_green2.webp',
+        ],
     },
 ]
 export default productsArray
