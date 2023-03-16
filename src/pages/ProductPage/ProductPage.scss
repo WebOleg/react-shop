@@ -15,6 +15,13 @@
         padding-left: 55px;
         align-items: flex-start;
         width: 60%;
+        .product_version{
+            span{
+                display: block;
+                margin-bottom: 15px;
+            }
+            
+        }
         span{
             font-size: 18px;
         }
@@ -50,6 +57,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    .zoomphoto.version_inf{
+        background: #0f0f0f;
+        width: 700px;
+        height: auto;
+        padding: 35px;
+        h3.title{
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            color: #fff;
+        }
+        span{
+            font-size: 20px;
+            color: #fff;
+            font-weight: bold;
+        }
+        p{
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+    }
     .zoomphoto{
         background-color: #fff;
         border-radius: 5px;
