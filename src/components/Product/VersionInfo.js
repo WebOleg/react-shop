@@ -1,10 +1,7 @@
 import React from 'react'
 import CloseIcon from '@mui/icons-material/Close'
 
-const VersionInfo = ({
-    isPopUpOpenVersionInfo,
-    handleClickCloseVersionInfo,
-}) => {
+const VersionInfo = ({ isPopUpOpenVersionInfo, handleClickVersionInfo }) => {
     return (
         <>
             {isPopUpOpenVersionInfo && (
@@ -14,7 +11,7 @@ const VersionInfo = ({
                             <CloseIcon
                                 variant="outline"
                                 className="closeicon"
-                                onClick={() => handleClickCloseVersionInfo()}
+                                onClick={() => handleClickVersionInfo()}
                             />
                         </div>
                         <h3 className="title">Global</h3>

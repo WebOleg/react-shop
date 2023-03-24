@@ -10,12 +10,16 @@ import ProductSlider from 'components/Product/ProductSlider'
 import VersionInfo from 'components/Product/VersionInfo'
 import ProductsSliderModal from 'components/Product/ProductsSliderModal'
 import ProductVersion from 'components/Product/ProductVersion'
+import ProductServices from 'components/Product/ProductServices'
 
 const ProductPage = ({ productsObject = getProductsObject(productsArray) }) => {
     const { id } = useParams()
     const product = productsObject[id]
     const [thumbsSwiper, setThumbsSwiper] = useState(null)
     const [isPopUpOpenImage, setIsPopUpOpenImage] = useState(false)
+    const [isPopUpOpenDelivery, setIsPopUpOpenDelivery] = useState(false)
+    const [isPopUpOpenPayment, setIsPopUpOpenPayment] = useState(false)
+    const [isPopUpOpenReturn, setIsPopUpOpenReturn] = useState(false)
     const [isPopUpOpenVersionInfo, setIsPopUpOpenVersionInfo] = useState(false)
     const [activeSlide, setActiveSlide] = useState(0)
     const [productPrice, setProductPrice] = useState(product.price)
@@ -26,11 +30,20 @@ const ProductPage = ({ productsObject = getProductsObject(productsArray) }) => {
     const handleClickCloseImage = () => {
         setIsPopUpOpenImage(false)
     }
+
     const handleClickVersionInfo = () => {
-        setIsPopUpOpenVersionInfo(true)
+        setIsPopUpOpenVersionInfo((prevState) => !prevState)
     }
-    const handleClickCloseVersionInfo = () => {
-        setIsPopUpOpenVersionInfo(false)
+
+    const handleClickDelivery = () => {
+        setIsPopUpOpenDelivery((prevState) => !prevState)
+    }
+    const handleClickPayment = () => {
+        setIsPopUpOpenPayment((prevState) => !prevState)
+    }
+
+    const handleClickReturn = () => {
+        setIsPopUpOpenReturn((prevState) => !prevState)
     }
     const changePrice = (k) => {
         setProductPrice(product.price * k)
@@ -73,10 +86,19 @@ const ProductPage = ({ productsObject = getProductsObject(productsArray) }) => {
                     <div className="line"></div>
                     <p>{product.describe}</p>
                     <div className="line"></div>
+                    <ProductServices
+                        handleClickDelivery={handleClickDelivery}
+                        isPopUpOpenDelivery={isPopUpOpenDelivery}
+                        handleClickPayment={handleClickPayment}
+                        isPopUpOpenPayment={isPopUpOpenPayment}
+                        handleClickReturn={handleClickReturn}
+                        isPopUpOpenReturn={isPopUpOpenReturn}
+                    ></ProductServices>
+                    <div className="line"></div>
                 </div>
             </div>
             <VersionInfo
-                handleClickCloseVersionInfo={handleClickCloseVersionInfo}
+                handleClickVersionInfo={handleClickVersionInfo}
                 isPopUpOpenVersionInfo={isPopUpOpenVersionInfo}
             />
         </>
