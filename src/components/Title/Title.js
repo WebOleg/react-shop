@@ -1,4 +1,3 @@
-import { positions } from '@mui/system'
 import React, { useState } from 'react'
 import './Title.scss'
 
