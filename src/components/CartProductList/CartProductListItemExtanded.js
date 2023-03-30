@@ -15,7 +15,7 @@ const CartProductListItemExtanded = ({
     toggleLike,
 }) => {
     return (
-        <Card className="card-item">
+        <Card variant="outlined" className="card-item">
             <CardContent className="content">
                 <Button onClick={() => toggleLike(product.id)}>
                     {productsLike[product.id] ? (
