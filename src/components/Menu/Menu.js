@@ -1,5 +1,4 @@
 import React from 'react'
-
 import './Menu.scss'
 import MenuItem from './MenuItem'
 import FavoriteIcon from '@mui/icons-material/Favorite'

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import articlesArray from 'utils/articlesarray'
 import Title from 'components/Title/Title'

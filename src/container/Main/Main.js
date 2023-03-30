@@ -1,6 +1,5 @@
 import React from 'react'
 import './Main.scss'
-import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import About from 'pages/About/About'
 import Contact from 'pages/Contact/Contact'

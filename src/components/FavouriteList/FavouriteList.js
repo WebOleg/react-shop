@@ -3,7 +3,6 @@ import React from 'react'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import productsArray, { getProductsObject } from 'utils/productsArray'
-import { spacing } from '@mui/system'
 import { Link } from 'react-router-dom'
 const FavouriteList = ({
     productsLike,
@@ -12,12 +11,12 @@ const FavouriteList = ({
 }) => {
     const productsLikeArray = Object.entries(productsLike)
     const filteredArray = productsLikeArray.filter(
-        (likeKey) => likeKey[1] != false
+        (likeKey) => likeKey[1] !== false
     )
     const productsLikeObject = Object.fromEntries(filteredArray)
 
     console.log(productsLikeObject)
-    if (filteredArray != 0) {
+    if (filteredArray !== 0) {
         return (
             <div className="container liked">
                 {Object.keys(productsLikeObject).map((productsLikeId) => (
@@ -35,6 +34,7 @@ const FavouriteList = ({
                             </div>
                             <div className="center">
                                 <img
+                                    alt={productsObject[productsLikeId].title}
                                     src={productsObject[productsLikeId].image}
                                 ></img>
                             </div>

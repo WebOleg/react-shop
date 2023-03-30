@@ -1,5 +1,4 @@
 import React from 'react'
-import productsArray, { getProductsObject } from 'utils/productsArray'
 import CartTotal from 'components/CartTotal/CartTotal'
 import CartProductList from 'components/CartProductList/CartProductList'
 import CartProductListItemExtanded from 'components/CartProductList/CartProductListItemExtanded'

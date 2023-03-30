@@ -7,7 +7,7 @@ const Title = (props) => {
     const [str, setStr] = useState('Hello World')
     const [color, setColor] = useState('red')
     const toggleColor = () => {
-        if (color == 'green') {
+        if (color === 'green') {
             setColor('red')
         } else {
             setColor('green')
@@ -15,7 +15,7 @@ const Title = (props) => {
     }
     const [positions, setPositions] = useState('none')
     const togglePositions = () => {
-        if (positions == 'none') {
+        if (positions === 'none') {
             setPositions('visible')
         } else {
             setPositions('none')

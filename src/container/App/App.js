@@ -3,7 +3,6 @@ import Header from '../Header/Header'
 import CssBaseline from '@mui/material/CssBaseline'
 import { StyledEngineProvider } from '@mui/material/styles'
 import Main from 'container/Main/Main'
-import { Button } from '@mui/material'
 import { omit } from 'lodash'
 
 const App = () => {

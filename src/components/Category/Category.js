@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 import React from 'react'
 import productsArray from 'utils/productsArray'
 import ProductsListItem from 'components/Products/ProductsListItem'
@@ -9,7 +9,7 @@ const Category = ({ toggleLike, productsLike, addProductToCart }) => {
     const categoryName = useParams()
     console.log(categoryName)
     const filteredArray = productsArray.filter(function (product) {
-        return product.category == categoryName.category
+        return product.category === categoryName.category
     })
 
     return (

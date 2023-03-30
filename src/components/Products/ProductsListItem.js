@@ -1,16 +1,9 @@
-import {
-    Card,
-    CardActions,
-    CardContent,
-    Button,
-    TextField,
-} from '@mui/material'
+import { Card, CardActions, CardContent, Button } from '@mui/material'
 import Quantity from 'components/Quantity/Quantity'
 import React, { useState } from 'react'
 import './ProductsListItem.scss'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import FavoriteIcon from '@mui/icons-material/Favorite'
-import { Category } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
 
 const ProductsListItem = ({
@@ -47,7 +40,7 @@ const ProductsListItem = ({
                         )}
                     </Button>
                     <div className="product-img">
-                        <img src={image}></img>
+                        <img alt={title} src={image}></img>
                     </div>
                     <h4 className="cardinf">
                         <Link to={`/products/${category}/${id}`}>{title}</Link>

@@ -1,4 +1,3 @@
-import { ClassNames } from '@emotion/react'
 import { Card, CardContent, Button, TextField } from '@mui/material'
 import React from 'react'
 import './CartProductItem.scss'
@@ -27,7 +26,7 @@ const CartProductListItemExtanded = ({
                 </Button>
                 <div className="name">{product.title}</div>
                 <div className="center">
-                    <img src={product.image}></img>
+                    <img alt={product.title} src={product.image}></img>
                 </div>
                 <div className="price">
                     For one item - <strong>{product.price}</strong>
