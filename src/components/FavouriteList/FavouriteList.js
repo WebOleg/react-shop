@@ -16,11 +16,12 @@ const FavouriteList = ({
     const productsLikeObject = Object.fromEntries(filteredArray)
 
     console.log(productsLikeObject)
-    if (filteredArray !== 0) {
+    console.log(filteredArray)
+    if (filteredArray.length !== 0) {
         return (
             <div className="container liked">
                 {Object.keys(productsLikeObject).map((productsLikeId) => (
-                    <Card className="card-item">
+                    <Card key={productsLikeId} className="card-item">
                         <CardContent className="content">
                             <Button onClick={() => toggleLike(productsLikeId)}>
                                 {productsLike[productsLikeId] ? (
