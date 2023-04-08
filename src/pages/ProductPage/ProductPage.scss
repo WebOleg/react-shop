@@ -9,6 +9,10 @@
         right: 0;
         order: 99;
     }
+    .left{
+        position: sticky;
+        top:0;
+    }
     .right{
         display: flex;
         flex-direction: column;

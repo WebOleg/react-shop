@@ -2,6 +2,7 @@ import React from 'react'
 import CartTotal from 'components/CartTotal/CartTotal'
 import CartProductList from 'components/CartProductList/CartProductList'
 import CartProductListItemExtanded from 'components/CartProductList/CartProductListItemExtanded'
+import PageTitle from 'components/PageTitle/PageTitle'
 
 const Cartpage = ({
     removeProductFromCart,
@@ -12,7 +13,7 @@ const Cartpage = ({
 }) => {
     return (
         <div className="card-item">
-            <h1>Cart</h1>
+            <PageTitle>Cart</PageTitle>
             <CartProductList
                 changeProductQuantity={changeProductQuantity}
                 CartItem={CartProductListItemExtanded}

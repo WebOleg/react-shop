@@ -1,11 +1,12 @@
 import React from 'react'
 import FavouriteList from 'components/FavouriteList/FavouriteList'
+import PageTitle from 'components/PageTitle/PageTitle'
 
 const Favourite = ({ productsLike, toggleLike }) => {
     console.log(productsLike)
     return (
         <div>
-            <div> Favourite</div>
+            <PageTitle>Favorite</PageTitle>
             <FavouriteList
                 toggleLike={toggleLike}
                 productsLike={productsLike}

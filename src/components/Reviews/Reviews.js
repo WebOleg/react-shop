@@ -1,12 +1,12 @@
 import React from 'react'
 import PageTitle from 'components/PageTitle/PageTitle'
 
-const about = () => {
+const Reviews = () => {
     return (
         <>
-            <PageTitle>About</PageTitle>
+            <PageTitle>Reviews</PageTitle>
         </>
     )
 }
 
-export default about
+export default Reviews

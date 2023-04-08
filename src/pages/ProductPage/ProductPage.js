@@ -84,7 +84,7 @@ const ProductPage = ({ productsObject = getProductsObject(productsArray) }) => {
                         changePrice={changePrice}
                     />
                     <div className="line"></div>
-                    <p>{product.describe}</p>
+                    <p>{product.fullDescription}</p>
                     <div className="line"></div>
                     <ProductServices
                         handleClickDelivery={handleClickDelivery}
