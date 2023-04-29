@@ -21,7 +21,7 @@ const Reviews = () => {
         }))
     }
     const onSend = () => {
-        if (newReview.name == '' || newReview.text == '') {
+        if (newReview.name === '' || newReview.text === '') {
             alert('The field is empty')
         } else {
             setReviews((prevState) => {
