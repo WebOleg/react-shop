@@ -3,6 +3,7 @@ import ProductsListItem from './ProductsListItem'
 import productsArray from 'utils/productsArray'
 import { Grid, Typography } from '@mui/material'
 import './ProductsList.scss'
+import Reviews from 'components/Reviews/Reviews'
 
 const ProductsList = ({ productsLike, addProductToCart, toggleLike }) => {
     return (
@@ -46,6 +47,7 @@ const ProductsList = ({ productsLike, addProductToCart, toggleLike }) => {
                     )
                 )}
             </Grid>
+            <Reviews></Reviews>
         </>
     )
 }
